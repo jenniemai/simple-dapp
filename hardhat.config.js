@@ -16,8 +16,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-// test account. put this private key in env var
-var privateKey = "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
+// var privatekey = process.env.testprivatekey;
 module.exports = {
   solidity: "0.8.4",
   paths: {
@@ -27,9 +26,9 @@ module.exports = {
     hardhat: {
       chainId: 1337
     },
-    rinkeby: {
-      url: "https://rinkeby.infura.io/v3/007a732cc7cf4c91896dbc0bded90a06",
-      accounts: [`0x${privateKey}`]
-    },
+    // rinkeby: {
+    //  url: "https://rinkeby.infura.io/v3/007a732cc7cf4c91896dbc0bded90a06",
+    //  accounts: [`0x${privatekey}`]
+    // },
   }
 };
